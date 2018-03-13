@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+
+
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:hint="Enter Destination"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true" />
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ok"
+            android:onClick="findLocation"
+            android:layout_alignParentTop="true"
+            />
+
+        <Button
+            android:id="@+id/adrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adrs"
+            android:onClick="findLocation"
+            android:layout_alignParentTop="true"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:id="@+id/linearLayout">
+    <TextView
+        android:id="@+id/tv_distance_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textSize="20dp"
+        android:text="@string/hello_world"
+        />
+</LinearLayout>
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/rg_modes"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:orientation="horizontal"-->
+
+        <!--android:layout_below="@+id/tv_distance_time"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true">-->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/linearLayout"
+    android:id="@+id/linearLayout2">
+
+
+        <Button
+            android:id="@+id/bus"
+            android:layout_height="59dp"
+            android:layout_width="55dp"
+            android:background="@drawable/bus"/>
+
+        <Button
+            android:id="@+id/cycle"
+            android:layout_height="59dp"
+            android:layout_width="55dp"
+            android:background="@drawable/cycle1"/>
+
+        <Button
+            android:id="@+id/car"
+            android:layout_height="59dp"
+            android:layout_width="55dp"
+            android:background="@drawable/car"/>
+        <Button
+            android:id="@+id/bike"
+            android:layout_height="59dp"
+            android:layout_width="55dp"
+            android:background="@drawable/bike"/>
+
+
+        <Button
+            android:id="@+id/walk"
+            android:layout_height="59dp"
+            android:layout_width="55dp"
+            android:background="@drawable/walk"/>
+
+</LinearLayout>
+        <!--<RadioButton android:id="@+id/rb_driving"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/str_rb_driving"-->
+            <!--android:checked="true" />-->
+
+        <!--<RadioButton android:id="@+id/rb_bicycling"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/str_rb_bicycling"-->
+
+            <!--android:checked="false" />-->
+
+        <!--<RadioButton android:id="@+id/rb_walking"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/str_rb_walking" />-->
+
+        <!--<RadioButton android:id="@+id/rb_car"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/str_rb_car" />-->
+
+
+
+        <!--<RadioButton android:id="@+id/rb_bike"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/str_rb_bike" />-->
+
+
+    <!--</RadioGroup>-->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2" />
+
+
+</RelativeLayout>
